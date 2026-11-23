@@ -1,8 +1,18 @@
-# 口袋星期天 · 最终源码
+# 口袋星期天 · 开源推箱子
 
 本仓库提供可直接打开的最终游戏页面，以及完整的 HTML/CSS/JavaScript 源码和构建脚本。
 
-## 打开游戏
+## 在线游玩与分享
+
+**[点击这里，直接开始游戏](https://shiyirong0128.github.io/DS_WORK_FINAL/)**
+
+将这个地址发送给朋友即可在浏览器中游玩，无需登录 GitHub、下载源码或安装软件：
+
+https://shiyirong0128.github.io/DS_WORK_FINAL/
+
+支持电脑键盘、鼠标和手机屏幕按钮。在线访问需要网络；也可以下载后离线游玩。
+
+## 下载后离线游玩
 
 1. 在本仓库点击 **Code → Download ZIP**，或[下载源码 ZIP](https://github.com/shiyirong0128/DS_WORK_FINAL/archive/refs/heads/main.zip)。
 2. 解压下载的文件。
@@ -10,7 +20,7 @@
 
 无需安装 Node.js、无需服务器，也无需联网。首页已内嵌样式、脚本、字体和图形；单独复制 `index.html` 也能打开。
 
-GitHub 的文件页用于查看源代码。要运行游戏，请下载后打开 `index.html`，不要把 GitHub 上的源码预览当作游戏页面。
+GitHub 的文件页用于查看源代码。运行游戏可以访问上方在线地址，或下载后打开 `index.html`。
 
 ## 操作与功能
 
@@ -42,6 +52,8 @@ GitHub 的文件页用于查看源代码。要运行游戏，请下载后打开 
 | `assets/fonts/` | 内嵌像素字体及 SIL Open Font License |
 | `预览图/` | 最终设计方向的预览图 |
 | `SOURCE.json` | 最终版来源仓库、提交与阶段记录 |
+| `LICENSE` | 项目代码的 MIT 开源许可证 |
+| `.nojekyll` | 让 GitHub Pages 直接发布静态文件 |
 
 ## 修改和重新构建
 
@@ -61,6 +73,18 @@ node scripts/preview.mjs
 然后访问 `http://127.0.0.1:4173/`，结束时按 Ctrl+C。
 
 截图工具使用 Node.js 22+ 和本机 Chrome；可通过 `CHROME_PATH` 指定浏览器，然后运行 `node scripts/capture.mjs`。截图工具属于开发辅助，打开游戏不需要它。
+
+## 自动发布
+
+本仓库使用 GitHub Pages，从 **main 分支的根目录**发布。修改源码后，先运行构建与测试，再将生成的 HTML 一起提交并推送；GitHub 会自动更新在线页面。发布状态可在仓库的 Actions 和 Settings → Pages 中查看。
+
+## 开源许可
+
+项目代码采用 [MIT License](LICENSE)，允许使用、修改及分发；分发时须保留版权和许可声明。
+
+第三方 VT323 像素字体（`assets/fonts/terminal.ttf`，也内嵌于生成的 HTML）继续遵守 [SIL Open Font License 1.1](assets/fonts/terminal-OFL.txt)，版权归 The VT323 Project Authors 所有。MIT 许可不替代该字体的原许可；分发本项目或包含该字体的版本时，请保留字体许可文件。
+
+欢迎通过 [Issues](https://github.com/shiyirong0128/DS_WORK_FINAL/issues) 报告问题，或提交 Pull Request 改进游戏。
 
 ## 版本来源
 
